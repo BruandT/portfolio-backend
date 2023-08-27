@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "works",
+  "info": {
+    "singularName": "work",
+    "pluralName": "works",
+    "displayName": "work",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "card": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "year": {
+      "type": "biginteger"
+    },
+    "link": {
+      "type": "string"
+    },
+    "problem": {
+      "type": "string"
+    },
+    "link_video": {
+      "type": "string"
+    },
+    "stacks": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::stack.stack",
+      "inversedBy": "works"
+    },
+    "road_map": {
+      "type": "text"
+    }
+  }
+}
